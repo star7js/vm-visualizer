@@ -1,7 +1,9 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QVBoxLayout, QWidget, QFileDialog, QAction
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QVBoxLayout, QWidget, QFileDialog, \
+    QAction
 
 from airspeed import Template
+
 
 class VelocityTemplatePreviewer(QMainWindow):
     def __init__(self):
@@ -60,11 +62,13 @@ class VelocityTemplatePreviewer(QMainWindow):
         except Exception as e:
             self.outputViewer.setText(f"Error: {e}")
 
+
 def main():
     app = QApplication(sys.argv)
     mainWin = VelocityTemplatePreviewer()
     mainWin.show()
     sys.exit(app.exec_())
+
 
 if __name__ == "__main__":
     main()
